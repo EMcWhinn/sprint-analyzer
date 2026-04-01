@@ -1,0 +1,43 @@
+# User-specific configuration
+CLAUDE.md
+
+# Memory files (user-specific)
+memory/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# Demo files (don't commit)
+demo_script.md
+demo_step_by_step.md
+RECORDING_GUIDE.md
+CLAUDE_CODE_DEMO.md
+VIDEO_DESCRIPTION.md
+
+# Output files
+sprint_analysis_*.md
+*.txt
