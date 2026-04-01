@@ -173,19 +173,33 @@ You can use this to understand the structure when configuring for your own proje
 
 ## Different Jira Structures?
 
-**Simple project (no custom fields):**
-```
-project = DOCS AND sprint in openSprints()
-```
+Your CLAUDE.md template needs the right JQL queries for your Jira setup. Here are examples:
 
-**Multiple teams:**
+**Sprint analysis (workstream/team-based):**
 ```
+# Platform Services example (current config)
+project = AAP AND Workstream = "Platform Services" AND sprint in openSprints()
+
+# Simple team filter
+project = DOCS AND Team = "Backend" AND sprint in openSprints()
+
+# Multiple teams
 project = SHOP AND Team in ("Checkout", "Payments") AND sprint in openSprints()
+
+# No custom fields (just use sprint)
+project = MYPROJ AND sprint in openSprints()
 ```
 
-**Component-specific:**
+**Component/label analysis:**
 ```
-project = MYPROJ AND component = "API" AND status in (Backlog, "In Progress")
+# By component (like aap-gateway)
+project = AAP AND component = "aap-gateway" AND status in (Backlog, Refinement, New, "In Progress")
+
+# By label
+project = MYPROJ AND labels = "api-changes" AND status in (Open, "In Progress")
+
+# Multiple components
+project = SHOP AND component in ("Checkout", "Payments") AND status in (Backlog, "In Progress")
 ```
 
 Use your Jira query builder to find the right field names for your instance.
