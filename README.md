@@ -19,7 +19,7 @@ Automate Jira sprint review and documentation impact analysis using Claude Code.
 ## Requirements
 
 - **Claude Code** - CLI, desktop app, or web ([claude.ai/code](https://claude.ai/code))
-- **Atlassian MCP Server** - For Jira integration ([setup guide](https://github.com/anthropics/anthropic-mcp-servers/tree/main/src/atlassian))
+- **Atlassian MCP Server** - For Jira integration ([setup guide](https://medium.com/@milad.jafary/how-to-connect-atlassian-mcp-server-to-claude-code-5c22d47d5cd5))
 - **Python 3.x** - To run the analyzer script
 - **Jira Instance** - With sprint-based workflow
 
