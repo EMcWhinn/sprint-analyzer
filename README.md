@@ -136,13 +136,29 @@ return {
 
 ## Example Queries
 
-Ask Claude Code:
+Once configured, ask Claude Code questions in natural language:
 
+**Sprint Analysis:**
 - `Analyze Platform Services sprints for documentation impact`
-- `Show me just the CVEs from the current sprint`
-- `Analyze the API component backlog`
+- `Analyze [your team name] sprints for documentation impact`
 - `What breaking changes are in the next sprint?`
 - `Compare this sprint to last sprint`
+
+**Component/Label-Specific:**
+- `Analyze aap-gateway label for documentation impact`
+- `Analyze the API component backlog`
+- `Show me [your component] tickets`
+
+**Filtered Views:**
+- `Show me just the CVEs from the current sprint`
+- `What customer-facing bugs are in the backlog?`
+- `List all breaking changes`
+
+The tool automatically:
+- Constructs the correct JQL query based on your CLAUDE.md configuration
+- Queries your Jira instance
+- Filters and categorizes results
+- Presents actionable reports
 
 ## Current Example Configuration
 
