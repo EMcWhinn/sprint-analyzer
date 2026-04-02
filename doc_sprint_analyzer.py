@@ -259,8 +259,8 @@ def format_issue_report(issues: List[Dict[str, Any]]) -> str:
         report.append("🔴 HIGH IMPACT - Action Required")
         report.append("-" * 80)
         for issue in high_impact:
-            report.append(f"\n{issue['key']}: {issue['summary']}")
-            report.append(f"  🔗 {issue['url']}")
+            report.append(f"\n[{issue['key']}] {issue['summary']}")
+            report.append(f"  🔗 Link: {issue['url']}")
             report.append(f"  Type: {issue['type']} | Status: {issue['status']}")
             report.append(f"  Assignee: {issue['assignee']} | Sprint: {issue['sprint']}")
             report.append(f"  💡 Impact: {issue['analysis']['reason']}")
@@ -270,8 +270,8 @@ def format_issue_report(issues: List[Dict[str, Any]]) -> str:
         report.append("🟡 MEDIUM IMPACT - Review Recommended")
         report.append("-" * 80)
         for issue in medium_impact:
-            report.append(f"\n{issue['key']}: {issue['summary']}")
-            report.append(f"  🔗 {issue['url']}")
+            report.append(f"\n[{issue['key']}] {issue['summary']}")
+            report.append(f"  🔗 Link: {issue['url']}")
             report.append(f"  Type: {issue['type']} | Status: {issue['status']}")
             report.append(f"  Assignee: {issue['assignee']} | Sprint: {issue['sprint']}")
             report.append(f"  💡 Impact: {issue['analysis']['reason']}")
@@ -281,8 +281,8 @@ def format_issue_report(issues: List[Dict[str, Any]]) -> str:
         report.append("🟢 LOW IMPACT - Monitor")
         report.append("-" * 80)
         for issue in low_impact:
-            report.append(f"\n{issue['key']}: {issue['summary']}")
-            report.append(f"  🔗 {issue['url']}")
+            report.append(f"\n[{issue['key']}] {issue['summary']}")
+            report.append(f"  🔗 Link: {issue['url']}")
             report.append(f"  Type: {issue['type']} | Status: {issue['status']}")
             report.append(f"  Assignee: {issue['assignee']} | Sprint: {issue['sprint']}")
             report.append(f"  💡 Impact: {issue['analysis']['reason']}")
